@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Banner from './common/banner';
+import NavBar from './common/navbar';
+import List from './views/list';
+import Cart from './views/cart';
+import {Route, Switch, Redirect} from 'react-router-dom';
+import {
+  GlobalStyle,
+  PageWrapper
+} from './style';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GlobalStyle />
+      <PageWrapper>
+        <Banner />
+        <NavBar />
+        <Switch>
+          <Route component={List} path='/list' />
+          <Route component={Cart} path='/cart' />
+          <Redirect from='/' to='/list' exact />
+        </Switch>
+      </PageWrapper>
     </div>
   );
 }

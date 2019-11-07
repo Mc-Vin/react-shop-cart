@@ -2,7 +2,7 @@ This is a shop cart project developed by React and Ant-Design.
 
 ## Demo
 
-![](D:\web study\itcast\就业班\02练习\13react.js\02购物车\cart_project\src\static\demo\demo.gif)
+![](https://github.com/Mc-Vin/react-shop-cart/blob/master/src/static/demo/demo.gif)
 
 ## Available Scripts
 
